@@ -12,8 +12,18 @@ range(7, 6); // []
 
 
 function range(start, end) {
-  // Your code here 
+  // base case: if end # is <= start #
+  if (end <= start) {
+    return [];
+  }
+  // recursive case: include start# and call range with next #
+  return [start].concat(range(start + 1, end));
 }
+
+console.log(range(1, 5));
+console.log(range(3, 4));
+console.log(range(7, 6));
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
