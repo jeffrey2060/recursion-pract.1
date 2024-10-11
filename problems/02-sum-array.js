@@ -11,7 +11,12 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 function sumArray(arr) {
-  // Your code here 
+  // base case: if array is empty return 0
+  if (arr.length === 0) {
+    return 0;
+  }
+  // recursive case: sum 1st element w/ sum of remaining elements
+  return arr[0] + sumArray(arr.slice(1));
 }
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

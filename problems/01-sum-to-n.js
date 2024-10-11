@@ -13,8 +13,25 @@ sumToN(-8)  // returns null
 
 
 function sumToN(n) {
-  // Your code here 
+// base case: 
+// return null if less than 0
+  if (n < 0) {
+    return null;
+  } 
+// return 0 if === 
+  if (n === 0) {
+    return 0;
+  }
+
+// recursive case   
+// adds n to all previous numbers  
+  return n + sumToN(n - 1);
 }
+
+
+// console.log(sumToN(5)); // 15
+// console.log(sumToN(-3)); // null
+// console.log(sumToN(10));
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
